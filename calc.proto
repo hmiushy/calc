@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calc;
+
+// サービス定義
+service CalcService {
+  rpc Add (AddRequest) returns (AddResponse);
+}
+
+// リクエスト
+message AddRequest {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+// レスポンス
+message AddResponse {
+  int32 result = 1;
+}
